@@ -5,7 +5,6 @@ Rails.application.routes.draw do
       get 'my_tweets'
     end
   end
-  resources :password, only: [:create]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   devise_for :users,
     path: '',
@@ -16,6 +15,7 @@ Rails.application.routes.draw do
     },
     controllers: {
       sessions: 'sessions',
-      registrations: 'registrations'
+      registrations: 'registrations',
+      passwords: 'passwords'
     }
 end
